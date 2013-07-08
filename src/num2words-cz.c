@@ -1,43 +1,43 @@
-#include "num2words-ro.h"
+#include "num2words-cz.h"
 #include "string.h"
 
 static const char* const ONES[] = {
-  "",
-  "unu",
-  "doua",
-  "trei",
-  "patru",
-  "cinci",
-  "sase",
-  "sapte",
-  "opt",
-  "noua"
+  "hodin",
+  "jedna",
+  "dva",
+  "tři",
+  "čtyři",
+  "pět",
+  "šest",
+  "sedm",
+  "osm",
+  "devět"
 };
 
 static const char* const TEENS[] ={
   "",
-  "unsprezece",
-  "doisprezece",
-  "treisprezece",
-  "patrusprezece",
-  "cincisprezece",
-  "saisprezece",
-  "saptesprezece",
-  "optsprezece",
-  "nouasprezece"
+  "jedenáct",
+  "dvanáct",
+  "třináct",
+  "čtrnáct",
+  "patnáct",
+  "šestnáct",
+  "sedmnáct",
+  "osmnáct",
+  "devatenáct"
 };
 
 static const char* const TENS[] = {
   "",
-  "zece",
-  "douazeci",
-  "treizeci",
-  "patruzeci",
-  "cincizeci",
-  "saizeci",
-  "saptezeci",
-  "optzeci",
-  "nouazeci"
+  "deset",
+  "dvacet",
+  "třicet",
+  "čtyřicet",
+  "padesát",
+  "šedesát",
+  "sedmdesát",
+  "osmdesát",
+  "devadesát"
 };
 
 static size_t append_number(char* words, int num) {
@@ -114,7 +114,7 @@ void time_to_3words(int hours, int minutes, char *line1, char *line2, char *line
 	}
 	
 	// Truncate long teen values
-	pch = strstr(line2, "sprezece");
+	pch = strstr(line2, "náct");
 	if (pch) {
 		memcpy(line3, pch, 8);
 		pch[0] = 0;
