@@ -3,7 +3,7 @@
 #include "pebble_fonts.h"
 #include "resource_ids.auto.h"
 
-#include "num2words-ro.h"
+#include "num2words-cz.h"
 
 #define DEBUG 0
 #define BUFFER_SIZE 44
